@@ -1,0 +1,13 @@
+PREFIX rescue: <http://rescuefood.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ns:
+INSERT {
+  ?feedback rdf:type rescue:Feedback .
+  ?feedback rescue:rating ?rating .
+  ?feedback rescue:comment ?comment .
+}
+WHERE {
+  BIND(IRI(CONCAT("http://rescuefood.org/ontology/Feedback_", STRUUID())) AS ?feedback)
+  BIND(?rating AS ?rating)
+  BIND(?comment AS ?comment)
+}

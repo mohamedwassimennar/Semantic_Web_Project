@@ -1,0 +1,15 @@
+PREFIX rescue: <http://rescuefood.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+INSERT {
+  ?restaurant rdf:type rescue:Restaurant .
+  ?restaurant rescue:name ?name .
+  ?restaurant rescue:contact ?contact .
+  ?restaurant rescue:address ?address .
+}
+WHERE {
+  BIND(IRI(CONCAT("http://rescuefood.org/ontology/Restaurant_", STRUUID())) AS ?restaurant)
+  BIND(?name AS ?name)
+  BIND(?contact AS ?contact)
+  BIND(?address AS ?address)
+}

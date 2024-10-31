@@ -1,0 +1,63 @@
+<h2 class="centered-title">List of Notifications</h2>
+<table>
+    <thead>
+        <tr>
+            <th hidden>Notification</th>
+            <th>Recipient</th>
+            <th>Type</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let notification of notifications">
+            <td hidden>
+                <a [href]="notification.notification" target="_blank">{{ notification.notification }}</a>
+            </td>
+            <td>{{ notification.recipient }}</td>
+            <td>{{ notification.notificationType }}</td>
+            <td>
+                <button (click)="deleteNotification(notification)" class="btn btn-danger">Delete</button>
+                <button (click)="openModal(notification)" class="btn btn-secondary">Modify</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div *ngIf="showModal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>Modify Notification</h2>
+        <form *ngIf="selectedNotification" #editNotificationForm="ngForm" (ngSubmit)="updateNotification()">
+
+
+            <label for="editRecipient">Recipient:</label>
+            <input id="editRecipient" name="recipient" [(ngModel)]="selectedNotification.recipient" class="form-control" required>
+
+            <label for="editNotificationType">Type:</label>
+            <input id="editNotificationType" name="notificationType" [(ngModel)]="selectedNotification.notificationType" class="form-control" required>
+
+            <div class="modal-actions">
+                <button type="submit" class="btn btn-success">Save Changes</button>
+                <button type="button" (click)="closeModal()" class="btn btn-secondary">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <button (click)="showForm = !showForm" class="btn btn-primary">
+    {{ showForm ? 'Cancel' : 'Add Notification' }}
+  </button>
+    <div *ngIf="showForm" class="card mt-3">
+        <form #notificationForm="ngForm" (ngSubmit)="submitNotification(newNotification)">
+
+            <label for="recipient">Recipient:</label>
+            <input id="recipient" name="recipient" [(ngModel)]="newNotification.recipient" class="form-control" required>
+
+            <label for="notificationType">Typede notification:</label>
+            <input id="notificationType" name="notificationType" [(ngModel)]="newNotification.notificationType" class="form-control" required>
+
+            <button type="submit" class="btn btn-success" [disabled]="notificationForm.invalid">Add</button>
+            <button type="button" (click)="showForm = false" class="btn btn-danger">Cancel</button>
+        </form>
+    </div>
+</div>

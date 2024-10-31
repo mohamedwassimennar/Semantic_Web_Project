@@ -1,0 +1,9 @@
+PREFIX rescue: <http://rescuefood.org/ontology#>
+
+SELECT ?demande ?typeNourriture ?quantiteDemande ?date
+WHERE {
+    ?demande rdf:type rescue:Demande .
+    OPTIONAL { ?demande rescue:typeNourriture ?typeNourriture }
+    OPTIONAL { ?demande rescue:quantiteDemande ?quantiteDemande }
+    OPTIONAL { ?demande rescue:date ?date }
+}

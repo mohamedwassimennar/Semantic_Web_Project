@@ -1,0 +1,14 @@
+PREFIX rescue: <http://rescuefood.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+INSERT {
+  ?demande rdf:type rescue:Demande .
+  ?demande rescue:typeNourriture ?typeNourriture .
+  ?demande rescue:quantiteDemande ?quantiteDemande .
+  ?demande rescue:date ?date .
+} WHERE {
+  BIND(IRI(CONCAT("http://rescuefood.org/ontology/Demande_", STRUUID())) AS ?demande) .
+  BIND(?typeNourriture AS ?typeNourriture) .
+  BIND(?quantiteDemande AS ?quantiteDemande) .
+  BIND(?date AS ?date) .
+}

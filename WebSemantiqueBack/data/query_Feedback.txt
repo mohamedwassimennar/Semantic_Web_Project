@@ -1,0 +1,9 @@
+PREFIX j0: <http://rescuefood.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?feedback ?rating ?comment
+WHERE {
+    ?feedback rdf:type j0:Feedback.
+    ?feedback j0:rating ?rating.
+    ?feedback j0:comment ?comment.
+}

@@ -1,0 +1,52 @@
+<h2>List of Managers</h2>
+
+<table class="restaurant-table">
+    <thead>
+        <tr>
+            <th hidden>Manager ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let manager of listManagers">
+            <td hidden>
+                <a [href]="manager.manager" target="_blank">{{ manager.manager }}</a>
+            </td>
+            <td>{{ manager.name }}</td>
+            <td>{{ manager.contact }}</td>
+            <td>
+                <button class="btn delete-btn" (click)="deleteManager(manager)">Delete</button>
+                <button class="btn modify-btn" (click)="updateManager(manager)">Modify</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="container">
+    <button (click)="showForm = !showForm" class="toggle-btn">
+        {{ showForm ? 'Cancel' : 'Add Manager' }}
+    </button>
+</div>
+
+<!-- Form will be shown/hidden based on showForm flag -->
+<div *ngIf="showForm" class="container mt-4">
+    <div class="card mt-3">
+        <div class="card-body">
+            <h2 class="card-title">Add Manager</h2>
+            <form #managerForm="ngForm" (ngSubmit)="addManager(newManager)">
+                <input type="text" id="managerId" name="manager" [(ngModel)]="newManager.manager" class="form-control" hidden>
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" [(ngModel)]="newManager.name" class="form-control" required>
+                                
+                <label for="contact">Contact:</label>
+                <input type="text" id="contact" name="contact" [(ngModel)]="newManager.contact" class="form-control" required>
+                
+                <button type="submit" [disabled]="managerForm.invalid" class="btn btn-success">Add</button>
+                <button type="button" (click)="showForm = false" class="btn btn-danger">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>

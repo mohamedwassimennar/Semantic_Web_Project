@@ -1,0 +1,169 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background for contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Card Styles */
+.card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6; /* Subtle border between rows */
+}
+
+th {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: #ffffff;
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+/* Button Styles */
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-success {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Grey */
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Slight grow effect */
+}
+
+/* Form Styles */
+label {
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+input.form-control {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* To account for padding */
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: auto; /* Center the container */
+}
+/* Navbar Styles */
+.navbar {
+    background-color: #4CAF50; /* Green background */
+    padding: 10px 20px; /* Padding for the navbar */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.navbar-brand {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 24px; /* Font size for brand */
+    margin: 0; /* Remove margin */
+}
+
+.navbar-menu {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Flexbox for menu items */
+}
+
+.navbar-item {
+    margin-left: 20px; /* Space between menu items */
+}
+
+.navbar-link {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding for links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.navbar-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+    .navbar-menu {
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%; /* Full width */
+    }
+    .navbar-item {
+        margin-left: 0; /* Remove left margin */
+        width: 100%; /* Full width for items */
+    }
+    .navbar-link {
+        display: block; /* Block display for full width */
+        text-align: center; /* Center text */
+    }
+}
+.toggle-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,8 @@
+PREFIX j0: <http://rescuefood.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?event ?date
+WHERE {
+    ?event rdf:type j0:CollectionEvent.
+    ?event j0:date ?date.
+}

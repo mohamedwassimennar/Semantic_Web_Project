@@ -1,0 +1,56 @@
+<h2>
+    List of Foods</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th hidden>Restaurant</th>
+            <th>Food Type</th>
+            <th>Quantity</th>
+            <th>Expiry Date</th>
+            <th>Actions</th>
+            <!-- Add a column for actions -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let restaurant of restaurants">
+            <td hidden>
+                <a [href]="restaurant.food" target="_blank">{{ restaurant.food }}</a>
+            </td>
+            <td>{{ restaurant.foodType }}</td>
+            <td>{{ restaurant.quantity }}</td>
+            <td>{{ restaurant.expiryDate }}</td>
+            <td>
+                <button (click)="deleteRestaurant(restaurant)" class="btn btn-danger">Delete</button>
+                <button class="btn btn-secondary" (click)="navigateToUpdatefoyer(restaurant)">Modify</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="container mt-4">
+    <div class="card mt-3">
+        <div *ngIf="showForm" class="card-body">
+            <h2 class="card-title">Add Food</h2>
+            <form #restaurantForm="ngForm" (ngSubmit)="addfoyer(newUni)">
+                <input type="text" id="restaurantName" name="restaurant" [(ngModel)]="newUni.food" class="form-control" hidden>
+
+                <label for="foodType">Food Type:</label>
+                <input type="text" id="foodType" name="foodType" [(ngModel)]="newUni.foodType" class="form-control" required>
+
+                <label for="quantity">Quantity:</label>
+                <input type="text" id="quantity" name="quantity" [(ngModel)]="newUni.quantity" class="form-control" required>
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="date" id="expiryDate" name="expiryDate" [(ngModel)]="newUni.expiryDate" class="form-control" required>
+
+                <button type="submit" [disabled]="restaurantForm.invalid" class="btn btn-success">Add</button>
+                <button type="button" (click)="showForm = false" class="btn btn-danger">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <button (click)="showForm = !showForm" class="btn btn-primary toggle-btn">
+    {{ showForm ? 'Cancel' : 'Add Food' }}
+  </button>
+</div>

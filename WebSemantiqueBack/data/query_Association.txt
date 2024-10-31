@@ -1,0 +1,8 @@
+PREFIX rescue: <http://rescuefood.org/ontology#>
+SELECT ?association ?nom ?adresse ?contact
+WHERE {
+    ?association a rescue:Association ;
+                 rescue:nom ?nom ;
+                 rescue:adresse ?adresse ;
+                 rescue:contact ?contact .
+}

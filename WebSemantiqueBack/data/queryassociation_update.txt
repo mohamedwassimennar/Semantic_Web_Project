@@ -1,0 +1,22 @@
+PREFIX ns: <http://example.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+
+DELETE {
+    ?association ns:nom ?oldNom ;
+                 ns:adresse ?oldAdresse ;
+                 ns:contact ?oldContact .
+}
+INSERT {
+    ?association ns:nom ?nom ;
+                 ns:adresse ?adresse ;
+                 ns:contact ?contact .
+}
+WHERE {
+    BIND(IRI("http://example.org/associations/YourAssociationID") AS ?association)
+    OPTIONAL {
+        ?association ns:nom ?oldNom ;
+                     ns:adresse ?oldAdresse ;
+                     ns:contact ?oldContact .
+    }
+}

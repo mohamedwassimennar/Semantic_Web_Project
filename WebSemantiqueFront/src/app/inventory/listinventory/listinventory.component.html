@@ -1,0 +1,67 @@
+<h2>Inventory List</h2>
+
+
+<table class="restaurant-table">
+    <thead>
+        <tr>
+            <th hidden>Inventory</th>
+            <th>Current Quantity<div class="button-group">
+                    <button (click)="sortInventories()" class="btn sort-btn">Sort by Quantity</button>
+                </div>
+            </th>
+            <th>Food Type</th>
+            <th>Expiry Date</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let inventory of inventories">
+            <td hidden>
+                <a [href]="inventory.inventory" target="_blank">{{ inventory.inventory }}</a>
+            </td>
+            <td>{{ inventory.currentQuantity }}</td>
+            <td>{{ inventory.foodType }}</td>
+            <td>{{ inventory.expiryDate }}</td>
+            <td>
+                <button class="btn delete-btn" (click)="deleteInventory(inventory)">Delete</button>
+                <button class="btn modify-btn" (click)="promptAndUpdateInventory(inventory)">Modify</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2> List of Foods</h2>
+
+<table class="restaurant-table">
+    <thead>
+        <tr>
+            <th hidden>Restaurant</th>
+            <th>Food Type</th>
+            <th>Quantity</th>
+            <th>Expiry Date</th>
+            <th>Actions</th>
+            <!-- Add a column for actions -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let restaurant of restaurants">
+            <td hidden>
+                <a [href]="restaurant.food" target="_blank">{{ restaurant.food }}</a>
+            </td>
+            <td>{{ restaurant.foodType }}</td>
+            <td>{{ restaurant.quantity }}</td>
+            <td>{{ restaurant.expiryDate }}</td>
+            <td>
+                <button (click)="addInventoryForRestaurant(restaurant)" class="btn btn-danger">Add more Inventory</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="container">
+
+
+    <button (click)="showForm = !showForm" class="toggle-btn">
+        {{ showForm ? 'Cancel' : 'Add Inventory' }}
+    </button>
+</div>

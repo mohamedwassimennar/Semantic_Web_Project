@@ -1,0 +1,5 @@
+PREFIX rescue: <http://rescuefood.org/ontology#>
+
+DELETE WHERE {
+    <http://rescuefood.org/ontology/Demande_YOUR_DEMANDE_URI> ?p ?o .
+}

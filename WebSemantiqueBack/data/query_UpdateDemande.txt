@@ -1,0 +1,17 @@
+PREFIX rescue: <http://rescuefood.org/ontology#>
+
+DELETE {
+    <http://rescuefood.org/ontology/Demande_YOUR_DEMANDE_URI> rescue:typeNourriture ?oldType .
+    <http://rescuefood.org/ontology/Demande_YOUR_DEMANDE_URI> rescue:quantiteDemande ?oldQuantite .
+    <http://rescuefood.org/ontology/Demande_YOUR_DEMANDE_URI> rescue:date ?oldDate .
+}
+INSERT {
+    <http://rescuefood.org/ontology/Demande_YOUR_DEMANDE_URI> rescue:typeNourriture "NEW_TYPE" .
+    <http://rescuefood.org/ontology/Demande_YOUR_DEMANDE_URI> rescue:quantiteDemande NEW_QUANTITE .
+    <http://rescuefood.org/ontology/Demande_YOUR_DEMANDE_URI> rescue:date "NEW_DATE" .
+}
+WHERE {
+    OPTIONAL { <http://rescuefood.org/ontology/Demande_YOUR_DEMANDE_URI> rescue:typeNourriture ?oldType }
+    OPTIONAL { <http://rescuefood.org/ontology/Demande_YOUR_DEMANDE_URI> rescue:quantiteDemande ?oldQuantite }
+    OPTIONAL { <http://rescuefood.org/ontology/Demande_YOUR_DEMANDE_URI> rescue:date ?oldDate }
+}

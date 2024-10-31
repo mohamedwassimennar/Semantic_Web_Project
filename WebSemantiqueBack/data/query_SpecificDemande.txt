@@ -1,0 +1,9 @@
+PREFIX rescue: <http://rescuefood.org/ontology#>
+
+SELECT ?demande ?typeNourriture ?quantiteDemande ?date
+WHERE {
+    BIND(<http://rescuefood.org/ontology/Demande_YOUR_DEMANDE_URI> AS ?demande)
+    OPTIONAL { ?demande rescue:typeNourriture ?typeNourriture }
+    OPTIONAL { ?demande rescue:quantiteDemande ?quantiteDemande }
+    OPTIONAL { ?demande rescue:date ?date }
+}

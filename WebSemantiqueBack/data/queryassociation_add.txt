@@ -1,0 +1,12 @@
+PREFIX ns: <http://example.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+INSERT {
+    _:newAssociation a ns:Association ;
+                    ns:nom ?nom ;
+                    ns:adresse ?adresse ;
+                    ns:contact ?contact .
+}
+WHERE {
+    BIND(IRI(CONCAT("http://example.org/associations/", STR(UUID())) ) AS ?newAssociation)
+}

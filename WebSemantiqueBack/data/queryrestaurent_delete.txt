@@ -1,0 +1,23 @@
+PREFIX rescue: <http://rescuefood.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+DELETE {
+  ?restaurant rescue:name ?oldName .
+  ?restaurant rescue:contact ?oldContact .
+  ?restaurant rescue:address ?oldAddress .
+}
+INSERT {
+  ?restaurant rescue:name ?newName .
+  ?restaurant rescue:contact ?newContact .
+  ?restaurant rescue:address ?newAddress .
+}
+WHERE {
+  ?restaurant rdf:type rescue:Restaurant .
+  BIND(?restaurant AS ?restaurant)
+  BIND(?oldName AS ?oldName)
+  BIND(?oldContact AS ?oldContact)
+  BIND(?oldAddress AS ?oldAddress)
+  BIND(?newName AS ?newName)
+  BIND(?newContact AS ?newContact)
+  BIND(?newAddress AS ?newAddress)
+}

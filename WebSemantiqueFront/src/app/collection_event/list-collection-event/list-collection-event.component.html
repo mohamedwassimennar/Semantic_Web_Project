@@ -1,0 +1,49 @@
+<div class="container">
+    <h2 class="title">List of Collection Events</h2>
+
+    <!-- List of events -->
+    <table class="event-table">
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let event of events">
+                <td>{{ event.event }}</td>
+                <td>{{ event.date }}</td>
+                <td>
+                    <button class="edit" (click)="editEvent(event)">Edit</button>
+                    <button class="delete" (click)="deleteEvent(event.event)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+        <!-- Form to add a new event -->
+        <div class="form-section">
+            <h3 class="form-title">Add New Collection Event</h3>
+            <label>Event:
+                <input class="input-field" [(ngModel)]="newEvent.event" placeholder="Enter event URI" />
+            </label><br>
+            <label>Date:
+                <input type="date" class="input-field" [(ngModel)]="newEvent.date" [min]="minDate" />
+            </label><br>
+            <button class="add" (click)="addEvent()">Add Event</button>
+        </div>
+
+    <!-- Edit Event Form -->
+    <div *ngIf="selectedEvent" class="form-section">
+        <h3 class="form-title">Edit Event</h3>
+        <label>Event:
+            <input class="input-field" [(ngModel)]="selectedEvent.event" />
+        </label><br>
+        <label>Date:
+            <input type="date" class="input-field" [(ngModel)]="selectedEvent.date" [min]="minDate" />
+        </label><br>
+        <button class="save" (click)="updateEvent()">Save</button>
+        <button class="cancel" (click)="selectedEvent = null">Cancel</button>
+    </div>
+</div>

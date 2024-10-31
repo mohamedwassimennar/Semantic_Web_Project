@@ -1,0 +1,19 @@
+PREFIX rescue: <http://rescuefood.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+DELETE {
+  ?food rescue:foodType ?oldFoodType.
+  ?food rescue:quantity ?oldQuantity.
+  ?food rescue:expiryDate ?oldExpiryDate.
+}
+INSERT {
+  ?food rescue:foodType ?newFoodType.
+  ?food rescue:quantity ?newQuantity.
+  ?food rescue:expiryDate ?newExpiryDate.
+}
+WHERE {
+  ?food rdf:type rescue:Food.
+  ?food rescue:foodType ?oldFoodType.
+  FILTER(?oldFoodType = ?foodTypeToModify)
+}

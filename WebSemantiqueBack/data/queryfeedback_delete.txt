@@ -1,0 +1,19 @@
+PREFIX rescue: <http://rescuefood.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+DELETE {
+  ?feedback rescue:rating ?oldRating .
+  ?feedback rescue:comment ?oldComment .
+}
+INSERT {
+  ?feedback rescue:rating ?newRating .
+  ?feedback rescue:comment ?newComment .
+}
+WHERE {
+  ?feedback rdf:type rescue:Feedback .
+  BIND(?feedback AS ?feedback)
+  BIND(?oldRating AS ?oldRating)
+  BIND(?oldComment AS ?oldComment)
+  BIND(?newRating AS ?newRating)
+  BIND(?newComment AS ?newComment)
+}

@@ -1,0 +1,74 @@
+.container {
+    max-width: 900px; /* Largeur maximale pour le conteneur */
+    margin: 0 auto; /* Centrer le conteneur */
+    padding: 20px; /* Espacement interne */
+    background-color: #f9f9f9; /* Couleur de fond douce */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+.title {
+    text-align: center;
+    color: #333;
+}
+
+.form-section {
+    margin: 20px 0; /* Espacement entre les sections */
+    padding: 15px; /* Espacement interne */
+    background-color: #fff; /* Couleur de fond blanche */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Ombre douce */
+}
+
+.form-title {
+    margin-bottom: 10px; /* Espacement en bas des titres */
+    color: #555;
+}
+
+.input-field {
+    width: calc(100% - 22px); /* Largeur responsive */
+    padding: 10px; /* Espacement interne */
+    margin-bottom: 10px; /* Espacement en bas */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 4px; /* Coins arrondis */
+}
+
+.event-table {
+    width: 100%; /* Largeur à 100% */
+    max-width: 1000px; /* Largeur maximale pour le tableau */
+    border-collapse: collapse; /* Supprimer les espaces entre les cellules */
+    margin-top: 20px; /* Espacement au-dessus du tableau */
+    overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
+}
+
+th, td {
+    padding: 10px; /* Espacement interne des cellules */
+    border: 1px solid #ddd; /* Bordure des cellules */
+    text-align: left; /* Alignement à gauche */
+}
+
+th {
+    background-color: #f2f2f2; /* Couleur de fond pour les en-têtes */
+}
+
+.add, .save, .cancel, .edit, .delete {
+    background-color: #4CAF50; /* Vert */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 15px; /* Espacement interne des boutons */
+    cursor: pointer; /* Curseur en forme de main */
+    margin-right: 5px; /* Espacement entre les boutons */
+    border-radius: 4px; /* Coins arrondis */
+}
+
+.edit {
+    background-color: #008CBA; /* Bleu */
+}
+
+.delete {
+    background-color: #f44336; /* Rouge */
+}
+
+button:hover {
+    opacity: 0.8; /* Effet d'opacité au survol */
+}

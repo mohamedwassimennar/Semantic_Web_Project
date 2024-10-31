@@ -1,0 +1,324 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://rescuefood.org/ontology#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://rescuefood.org/ontology#Inventory">
+    <j.0:currentQuantity>Float</j.0:currentQuantity>
+  </owl:Class>
+  <owl:Class rdf:about="http://rescuefood.org/ontology#Notification">
+    <j.0:notificationType>String</j.0:notificationType>
+    <j.0:recipient>String</j.0:recipient>
+  </owl:Class>
+  <owl:Class rdf:about="http://rescuefood.org/ontology#Restaurant">
+    <j.0:name>String</j.0:name>
+    <j.0:address>String</j.0:address>
+    <j.0:contact>String</j.0:contact>
+  </owl:Class>
+  <owl:Class rdf:about="http://rescuefood.org/ontology#Manager">
+    <j.0:name>String</j.0:name>
+    <j.0:contact>String</j.0:contact>
+  </owl:Class>
+  <owl:Class rdf:about="http://rescuefood.org/ontology#Food">
+    <j.0:foodType>String</j.0:foodType>
+    <j.0:quantity>Float</j.0:quantity>
+    <j.0:expiryDate>Date</j.0:expiryDate>
+  </owl:Class>
+  <owl:Class rdf:about="http://rescuefood.org/ontology#Feedback">
+    <j.0:comment>String</j.0:comment>
+    <j.0:rating>Integer</j.0:rating>
+  </owl:Class>
+  <owl:Class rdf:about="http://rescuefood.org/ontology#Director">
+    <j.0:name>String</j.0:name>
+    <j.0:contact>String</j.0:contact>
+  </owl:Class>
+  <owl:Class rdf:about="http://rescuefood.org/ontology#CollectionEvent">
+    <j.0:date>Date</j.0:date>
+  </owl:Class>
+  <owl:Class rdf:about="http://rescuefood.org/ontology#Association">
+    <j.0:name>String</j.0:name>
+    <j.0:address>String</j.0:address>
+    <j.0:contact>String</j.0:contact>
+    <j.0:foodNeeds>String</j.0:foodNeeds>
+  </owl:Class>
+  <owl:Class rdf:about="http://rescuefood.org/ontology#Request">
+    <j.0:quantity>Float</j.0:quantity>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://rescuefood.org/ontology#managesInventory">
+    <rdfs:domain rdf:resource="http://rescuefood.org/ontology#Association"/>
+    <rdfs:range rdf:resource="http://rescuefood.org/ontology#Inventory"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rescuefood.org/ontology#collectsFood">
+    <rdfs:domain rdf:resource="http://rescuefood.org/ontology#CollectionEvent"/>
+    <rdfs:range rdf:resource="http://rescuefood.org/ontology#Food"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rescuefood.org/ontology#requestsFood">
+    <rdfs:domain rdf:resource="http://rescuefood.org/ontology#Association"/>
+    <rdfs:range rdf:resource="http://rescuefood.org/ontology#Food"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rescuefood.org/ontology#providesExcess">
+    <rdfs:domain rdf:resource="http://rescuefood.org/ontology#Restaurant"/>
+    <rdfs:range rdf:resource="http://rescuefood.org/ontology#Food"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rescuefood.org/ontology#organizesEvent">
+    <rdfs:domain rdf:resource="http://rescuefood.org/ontology#Association"/>
+    <rdfs:range rdf:resource="http://rescuefood.org/ontology#CollectionEvent"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rescuefood.org/ontology#stores">
+    <rdfs:domain rdf:resource="http://rescuefood.org/ontology#Inventory"/>
+    <rdfs:range rdf:resource="http://rescuefood.org/ontology#Food"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#currentQuantity"/>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#comment"/>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#address"/>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#foodType"/>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#foodNeeds"/>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#date"/>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#contact"/>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#expiryDate"/>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#recipient"/>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#quantity"/>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#rating"/>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#name"/>
+  <owl:DatatypeProperty rdf:about="http://rescuefood.org/ontology#notificationType"/>
+  <j.0:Association rdf:about="http://rescuefood.org/ontology/Association_d1572240-fad9-44cc-b598-8b51fef7274f">
+    <j.0:nom>chaima3</j.0:nom>
+    <j.0:adresse>lac3</j.0:adresse>
+    <j.0:contact>1234</j.0:contact>
+  </j.0:Association>
+  <j.0:Food rdf:about="http://rescuefood.org/ontology#Food80f70be6-24ad-4065-ae88-1c08b9dfe08d">
+    <j.0:foodType>ar</j.0:foodType>
+    <j.0:quantity>azr</j.0:quantity>
+    <j.0:expiryDate>aze</j.0:expiryDate>
+  </j.0:Food>
+  <j.0:Association rdf:about="http://rescuefood.org/ontology/Association_4ea81597-3407-4ac1-9b9d-7adc55958538">
+    <j.0:nom>chaima3a</j.0:nom>
+    <j.0:adresse>lac3a</j.0:adresse>
+    <j.0:contact>1234</j.0:contact>
+  </j.0:Association>
+  <j.0:Association rdf:about="http://rescuefood.org/ontology/Association_d670787e-afb6-4f46-bb7b-bfec2a434294">
+    <j.0:nom>Association Name</j.0:nom>
+    <j.0:adresse>Address</j.0:adresse>
+    <j.0:contact>Contact Information</j.0:contact>
+  </j.0:Association>
+  <j.0:Association rdf:about="http://rescuefood.org/ontology#Association1">
+    <j.0:name>Food for All</j.0:name>
+    <j.0:address>456 Charity Ave, City</j.0:address>
+    <j.0:contact>54098765</j.0:contact>
+    <j.0:foodNeeds>Vegetables, Fruits</j.0:foodNeeds>
+  </j.0:Association>
+  <rdf:Description rdf:about="http://rescuefood.org/ontology/AssociationName">
+    <j.0:contact>51730998</j.0:contact>
+    <j.0:adresse>Carthage</j.0:adresse>
+    <j.0:nom>http://rescuefood.org/ontology/AssociationName</j.0:nom>
+  </rdf:Description>
+  <j.0:Inventory rdf:about="http://rescuefood.org/ontology#Inventory6519fc46-dd54-4ee3-bf39-e856bdaff1d2">
+    <j.0:currentQuantity>500,0</j.0:currentQuantity>
+  </j.0:Inventory>
+  <j.0:Demande rdf:about="http://rescuefood.org/ontology/Demande_f60a6454-7e08-4c30-83d5-9de1b9815ce5">
+    <j.0:date>2024-10-30T10:00:00Z</j.0:date>
+    <j.0:quantiteDemande rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >10.5</j.0:quantiteDemande>
+    <j.0:typeNourriture>Fruits1</j.0:typeNourriture>
+  </j.0:Demande>
+  <j.0:Association rdf:about="http://rescuefood.org/ontology/Association_42c2173c-b2e1-48cc-a55a-1b7cbb76d0bc">
+    <j.0:nom>chaima2</j.0:nom>
+    <j.0:adresse>lac2</j.0:adresse>
+    <j.0:contact>1234</j.0:contact>
+  </j.0:Association>
+  <rdf:Description rdf:about="http://rescuefood.org/ontology/TypeofFood">
+    <j.0:date>2024-11-01</j.0:date>
+    <j.0:quantiteDemande rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >5.0</j.0:quantiteDemande>
+    <j.0:typeNourriture>null</j.0:typeNourriture>
+  </rdf:Description>
+  <j.0:Demande rdf:about="http://rescuefood.org/ontology/Demande_35e48691-bfdf-45ec-abac-7a7d03813c00">
+    <j.0:date>2024-10-30</j.0:date>
+    <j.0:quantiteDemande rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >10.5</j.0:quantiteDemande>
+    <j.0:typeNourriture>null</j.0:typeNourriture>
+  </j.0:Demande>
+  <j.0:Director rdf:about="http://rescuefood.org/ontology#Directorb53d79df-f7d5-4d6c-9179-eddba383aac0">
+    <j.0:contact>aee</j.0:contact>
+    <j.0:name>zaa</j.0:name>
+  </j.0:Director>
+  <j.0:Association rdf:about="http://rescuefood.org/ontology/Association_a5fad334-1af2-46c5-b962-a54023eaf4d1">
+    <j.0:contact>1234</j.0:contact>
+    <j.0:adresse>lac2</j.0:adresse>
+    <j.0:nom>chaima2</j.0:nom>
+  </j.0:Association>
+  <j.0:Food rdf:about="http://rescuefood.org/ontology#Food3305c49c-2cee-4e08-bbcf-80cfca92e754">
+    <j.0:foodType>123</j.0:foodType>
+    <j.0:quantity>123</j.0:quantity>
+    <j.0:expiryDate>123</j.0:expiryDate>
+  </j.0:Food>
+  <j.0:Demande rdf:about="http://rescuefood.org/ontology/Demande_3ef84818-338d-424d-97df-ff89e94a0a12">
+    <j.0:date>2024-10-30T10:00:00Z</j.0:date>
+    <j.0:quantiteDemande rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >10.5</j.0:quantiteDemande>
+    <j.0:typeNourriture>Fruits</j.0:typeNourriture>
+  </j.0:Demande>
+  <j.0:Inventory rdf:about="http://rescuefood.org/ontology#Inventoryb4ed9bfe-b267-411e-94ab-3114ccca0927">
+    <j.0:currentQuantity>15,000000</j.0:currentQuantity>
+    <j.0:stores>
+      <j.0:Food rdf:about="http://rescuefood.org/ontology#Food3305c49c-2cee-4e08-bbcf-80cfca92e754">
+        <j.0:foodType>123</j.0:foodType>
+        <j.0:quantity>123</j.0:quantity>
+        <j.0:expiryDate>123</j.0:expiryDate>
+      </j.0:Food>
+    </j.0:stores>
+  </j.0:Inventory>
+  <j.0:Restaurant rdf:about="http://rescuefood.org/ontology#Restaurant1c6450d8-4aef-4431-8a0a-8ca8b30f794d">
+    <j.0:name>Le test</j.0:name>
+    <j.0:contact>test</j.0:contact>
+    <j.0:address>test</j.0:address>
+  </j.0:Restaurant>
+  <j.0:Demande rdf:about="http://rescuefood.org/ontology/Demande_0f7cd527-4b67-4261-ba7e-46b76d5ec675">
+    <j.0:date>2024-10-30T10:00:00Z</j.0:date>
+    <j.0:quantiteDemande rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >10.5</j.0:quantiteDemande>
+    <j.0:typeNourriture>Fruits1111</j.0:typeNourriture>
+  </j.0:Demande>
+  <j.0:Demande rdf:about="http://rescuefood.org/ontology/Demande_6e054767-399d-4390-8301-f9221ba5a4fc">
+    <j.0:date>2024-10-30T10:00:00Z</j.0:date>
+    <j.0:quantiteDemande rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >10.5</j.0:quantiteDemande>
+    <j.0:typeNourriture>Fruits1</j.0:typeNourriture>
+  </j.0:Demande>
+  <j.0:Inventory rdf:about="http://rescuefood.org/ontology#Inventorydc6c8e35-9eee-408c-a247-f0e059df0c58">
+    <j.0:currentQuantity>500.0</j.0:currentQuantity>
+  </j.0:Inventory>
+  <j.0:Demande rdf:about="http://rescuefood.org/ontology/Demande_90674030-58c3-45b6-9405-5e2984fccae1">
+    <j.0:date>2024-10-30T10:00:00Z</j.0:date>
+    <j.0:quantiteDemande rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >10.5</j.0:quantiteDemande>
+    <j.0:typeNourriture>Fruits1</j.0:typeNourriture>
+  </j.0:Demande>
+  <j.0:Food rdf:about="http://rescuefood.org/ontology#Foodd0b64ce2-7757-46e3-a7f5-25011c8ec839">
+    <j.0:foodType>44</j.0:foodType>
+    <j.0:quantity>44</j.0:quantity>
+    <j.0:expiryDate>444</j.0:expiryDate>
+  </j.0:Food>
+  <j.0:Restaurant rdf:about="http://rescuefood.org/ontology#Restaurant4f80ca5a-25fd-4467-9c1b-7853222451ad">
+    <j.0:name>Le test</j.0:name>
+    <j.0:contact>test</j.0:contact>
+    <j.0:address>test</j.0:address>
+  </j.0:Restaurant>
+  <j.0:Demande rdf:about="http://rescuefood.org/ontology/Demande_fed562c6-6820-4c18-8690-93eb7a19a15a">
+    <j.0:typeNourriture>Fruits</j.0:typeNourriture>
+    <j.0:quantiteDemande rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >10.5</j.0:quantiteDemande>
+    <j.0:date>2024-10-30T10:00:00Z</j.0:date>
+  </j.0:Demande>
+  <j.0:Inventory rdf:about="http://rescuefood.org/ontology#Inventoryccb6e41f-f195-4ee4-a362-a1ed5eb79cb0">
+    <j.0:currentQuantity>500,0</j.0:currentQuantity>
+  </j.0:Inventory>
+  <j.0:Restaurant rdf:about="http://rescuefood.org/ontology#Restaurant8a471334-0c7e-4a81-890a-4736e93308f8">
+    <j.0:name>Le test</j.0:name>
+    <j.0:contact>test</j.0:contact>
+    <j.0:address>test</j.0:address>
+  </j.0:Restaurant>
+  <j.0:Feedback rdf:about="http://rescuefood.org/ontology#Feedbacka42c56a4-3088-481c-90c0-059a75130b46">
+    <j.0:rating>2</j.0:rating>
+    <j.0:comment>azert</j.0:comment>
+    <j.0:feedback>http://rescuefood.org/ontology#Feedbacka42c56a4-3088-481c-90c0-059a75130b46</j.0:feedback>
+  </j.0:Feedback>
+  <j.0:Food rdf:about="http://rescuefood.org/ontology#Foodc332c313-eec1-41df-a231-fc6cbeec1203">
+    <j.0:foodType>rzaazraz</j.0:foodType>
+    <j.0:quantity>aztaztazt</j.0:quantity>
+    <j.0:expiryDate>atztazaz</j.0:expiryDate>
+  </j.0:Food>
+  <j.0:Demande rdf:about="http://rescuefood.org/ontology/Demande_402816e3-aae8-4186-a1a7-903a46c86ad5">
+    <j.0:date>2024-10-30T10:00:00Z</j.0:date>
+    <j.0:quantiteDemande rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >10.5</j.0:quantiteDemande>
+    <j.0:typeNourriture>Fruits1</j.0:typeNourriture>
+  </j.0:Demande>
+  <j.0:Feedback rdf:about="http://rescuefood.org/ontology#Feedback5">
+    <j.0:rating>12</j.0:rating>
+    <j.0:comment>Service  meilleur !</j.0:comment>
+  </j.0:Feedback>
+  <j.0:Request rdf:about="http://rescuefood.org/ontology#Request1">
+    <j.0:quantity>200.0</j.0:quantity>
+  </j.0:Request>
+  <j.0:Restaurant rdf:about="http://rescuefood.org/ontology#Restaurant56d35b30-4c5e-44e9-84cc-339b22d6196f">
+    <j.0:name>raz</j.0:name>
+    <j.0:contact>azr</j.0:contact>
+    <j.0:address>rza</j.0:address>
+  </j.0:Restaurant>
+  <j.0:Demande rdf:about="http://rescuefood.org/ontology/Demande_3be5886e-09cf-4f71-b2f6-c5a2d4a2cd59">
+    <j.0:typeNourriture>Fruits</j.0:typeNourriture>
+    <j.0:quantiteDemande rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >10.5</j.0:quantiteDemande>
+    <j.0:date>2024-10-30T10:00:00Z</j.0:date>
+  </j.0:Demande>
+  <j.0:Manager rdf:about="http://rescuefood.org/ontology#Manager1">
+    <j.0:name>Said Atoui</j.0:name>
+    <j.0:contact>53034112</j.0:contact>
+  </j.0:Manager>
+  <j.0:Association rdf:about="http://rescuefood.org/ontology/Association_524d34a3-6aa2-434e-9efe-be46c12de6e3">
+    <j.0:nom>chaima</j.0:nom>
+    <j.0:adresse>lac</j.0:adresse>
+    <j.0:contact>1234</j.0:contact>
+  </j.0:Association>
+  <rdf:Description rdf:about="http://rescuefood.org/ontology#Food9fed694e-8967-4360-93db-66c90410ccfc">
+    <j.0:foodType>aaa1234</j.0:foodType>
+    <j.0:quantity>aa123</j.0:quantity>
+    <j.0:expiryDate>aa123</j.0:expiryDate>
+  </rdf:Description>
+  <j.0:Association rdf:about="http://rescuefood.org/ontology/Association_6202fd96-dbb0-4a2c-899a-6c2ff89a32af">
+    <j.0:nom>chaima1</j.0:nom>
+    <j.0:adresse>lac1</j.0:adresse>
+    <j.0:contact>1234</j.0:contact>
+  </j.0:Association>
+  <j.0:Notification rdf:about="http://rescuefood.org/ontology#Notification1">
+    <j.0:notificationType>Collection Reminder</j.0:notificationType>
+    <j.0:recipient>Restaurant1</j.0:recipient>
+    <j.0:recipient>Restaurant</j.0:recipient>
+    <j.0:notificationType>Collection eminder</j.0:notificationType>
+  </j.0:Notification>
+  <j.0:Restaurant rdf:about="http://rescuefood.org/ontology#Restaurante9f4d28d-ce53-4434-b9d1-c8e338890ca4">
+    <j.0:name>rza</j.0:name>
+    <j.0:contact>aezr</j.0:contact>
+    <j.0:address>raz</j.0:address>
+  </j.0:Restaurant>
+  <j.0:Food rdf:about="http://rescuefood.org/ontology#Food351ff226-6999-4adc-9788-3ffd52aa9cfa">
+    <j.0:foodType>raz</j.0:foodType>
+    <j.0:quantity>raz</j.0:quantity>
+    <j.0:expiryDate>raz</j.0:expiryDate>
+  </j.0:Food>
+  <j.0:Demande rdf:about="http://rescuefood.org/ontology/Demande_ec3529d6-dbeb-43ed-afe2-efddaf9fd49b">
+    <j.0:date>2024-10-30T10:00:00Z</j.0:date>
+    <j.0:quantiteDemande rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >10.5</j.0:quantiteDemande>
+    <j.0:typeNourriture>Fruits</j.0:typeNourriture>
+  </j.0:Demande>
+  <j.0:CollectionEvent rdf:about="http://rescuefood.org/ontology#CollectionEvent1">
+    <j.0:date>2024-10-31</j.0:date>
+  </j.0:CollectionEvent>
+  <rdf:Description rdf:about="http://rescuefood.org/ontology#Director357c3e2d-14db-4f58-91c7-bb5e5dc8560c">
+    <j.0:name>cab</j.0:name>
+    <j.0:contact>john.doe@example.com</j.0:contact>
+  </rdf:Description>
+  <j.0:Demande rdf:about="http://rescuefood.org/ontology/Demande_370a02b7-e41f-4ae6-b9d2-6e11d53d713d">
+    <j.0:date>2024-10-30T10:00:00Z</j.0:date>
+    <j.0:quantiteDemande rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >10.5</j.0:quantiteDemande>
+    <j.0:typeNourriture>Fruits1</j.0:typeNourriture>
+  </j.0:Demande>
+  <j.0:Feedback rdf:about="http://rescuefood.org/ontology/Feedback_13d3a1a9-4b16-4826-a4ae-426f82f84be0">
+    <j.0:rating>11</j.0:rating>
+    <j.0:comment>Excellent service!</j.0:comment>
+  </j.0:Feedback>
+  <j.0:Association rdf:about="http://rescuefood.org/ontology/Association_f2050325-12e4-4ff6-99c9-a3aeff5adfef">
+    <j.0:nom>chaima2</j.0:nom>
+    <j.0:adresse>lac2</j.0:adresse>
+    <j.0:contact>1234</j.0:contact>
+  </j.0:Association>
+  <j.0:Restaurant rdf:about="http://rescuefood.org/ontology#Restaurant92ba45a6-29df-4e4d-9e55-e8c8dae056a0">
+    <j.0:name>aze</j.0:name>
+    <j.0:contact>aze</j.0:contact>
+    <j.0:address>zae</j.0:address>
+  </j.0:Restaurant>
+</rdf:RDF>

@@ -1,0 +1,10 @@
+PREFIX rescue: <http://rescuefood.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?notification ?recipient ?notificationType
+WHERE {
+  ?notification rdf:type rescue:Notification.
+  ?notification rescue:recipient ?recipient.
+  ?notification rescue:notificationType ?notificationType.
+}
