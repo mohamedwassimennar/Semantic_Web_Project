@@ -1,5 +1,7 @@
 # Food Rescue
 
+![Project Screenshot](123.png)
+
 Food Rescue is a web application designed to facilitate the recovery of surplus food from restaurants and retailers, as well as its redistribution to charitable organizations. This project includes a backend developed with Spring and a frontend built with Angular.
 
 We also worked with Protégé to create object properties, data properties, and individuals. Additionally, we worked on the ontology, RDF and OWL files, and SPARQL queries.
