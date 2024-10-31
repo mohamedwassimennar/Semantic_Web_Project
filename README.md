@@ -1,48 +1,51 @@
 # Food Rescue
 
-Food Rescue est une application web conçue pour faciliter la récupération des excédents alimentaires des restaurants et commerçants, ainsi que leur redistribution aux associations caritatives. Ce projet comprend un backend développé avec Spring et un frontend construit avec Angular.
+Food Rescue is a web application designed to facilitate the recovery of surplus food from restaurants and retailers, as well as its redistribution to charitable organizations. This project includes a backend developed with Spring and a frontend built with Angular.
 
-## Fonctionnalités
+We also worked with Protégé to create object properties, data properties, and individuals. Additionally, we worked on the ontology, RDF and OWL files, and SPARQL queries.
 
-L'application propose les fonctionnalités suivantes :
+Here is the link to the presentation: [Presentation Link](https://www.canva.com/design/DAGR5eSLDyU/yvH2xbPooPlCQK5dOvx0tg/edit?utm_content=DAGR5eSLDyU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-- **Gestion des Directeurs** : Ajout, mise à jour et suppression des directeurs.
-- **Gestion des Associations** : Administration des associations caritatives impliquées dans la collecte des aliments.
-- **Gestion des Restaurants** : Enregistrement et gestion des restaurants participant à la récupération des excédents.
-- **Gestion de la Nourriture** : Suivi des types de nourriture disponibles et de leur état.
-- **Gestion de l'Inventaire** : Suivi des stocks de nourriture récupérés.
-- **Feedback** : Collecte des retours d'expérience des utilisateurs.
-- **Notifications** : Envoi de notifications pour les événements de collecte.
-- **Événements de Collecte** : Organisation et gestion des événements de collecte.
+## Features
 
-## Technologies Utilisées
+The application offers the following features:
+
+- **Director Management**: Addition, updating, and deletion of directors.
+- **Association Management**: Administration of charitable organizations involved in food collection.
+- **Restaurant Management**: Registration and management of restaurants participating in surplus recovery.
+- **Food Management**: Tracking of available food types and their condition.
+- **Inventory Management**: Monitoring of recovered food stocks.
+- **Feedback**: Collection of user experience feedback.
+- **Notifications**: Sending notifications for collection events.
+- **Collection Events**: Organization and management of collection events.
+
+## Technologies Used
 
 - **Backend** : Spring Framework
 - **Frontend** : Angular
-- **Gestion des Ontologies** : Apache Jena
+- **Ontology Management** : Apache Jena
 
-### Prérequis
+### Prerequisites
+Before you begin, make sure you have the following installed on your machine:
 
-Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur votre machine :
-
-- JDK 11 ou supérieur
-- Node.js et npm
+- JDK 11 or higher
+- Node.js and npm
 - Maven
 
-### Instructions d'installation
+### Installation Instructions
 
-1. **Cloner le dépôt** :
+1. **Clone the repository** :
    ```bash
    git clone https://github.com/votre-utilisateur/food-rescue.git
    cd food-rescue
    ```
-2. **Installer le backend et Démarrer le serveur :** :
+2. **Install the backend and Start the server: :** :
    ```bash
    cd backend
    mvn install
    mvn spring-boot:run
    ```
-3. **Installer le frontend et Démarrer le serveur frontend :** :
+3. **Install the frontend and Start the frontend server :** :
    ```bash
    cd frontend
    npm install
@@ -58,12 +61,6 @@ The following individuals contributed to the development of RescueFood:
 - Said Atoui
 - Ahmed Gamgami
 - Chaima Idoudi
-
-## Project Features
-
-- **Food Recovery Management:** Schedule and manage food recovery events.
-- **Organization Coordination:** Facilitate communication and coordination between food providers and charities.
-- **Data Security:** Protect sensitive data related to donations and user information.
 
 ## Contact
 
