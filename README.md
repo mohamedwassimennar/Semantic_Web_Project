@@ -35,19 +35,19 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur 
    ```bash
    git clone https://github.com/votre-utilisateur/food-rescue.git
    cd food-rescue
-       ```
+   ```
 2. **Installer le backend et Démarrer le serveur :** :
    ```bash
-  cd backend
-  mvn install
-  mvn spring-boot:run
-      ```
+   cd backend
+   mvn install
+   mvn spring-boot:run
+   ```
 3. **Installer le frontend et Démarrer le serveur frontend :** :
    ```bash
-  cd frontend
-  npm install
-  ng serve -o
-    ```
+   cd frontend
+   npm install
+   ng serve -o
+   ```
 
 ## Contributors
 
